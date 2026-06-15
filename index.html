@@ -748,6 +748,10 @@ pre{margin:0}
       <p>An opt-in <code>/plan</code> workflow runs <b>explore → plan → implement → review</b> as context-isolated phases: a read-only agent maps the code, a second drafts the plan, then a write-disabled reviewer <em>runs the code</em> and feeds gaps back for a bounded retry.</p>
     </div>
     <div class="feat">
+      <h3>Spec-Driven Workflow</h3>
+      <p>Align on <em>what</em> before <em>how</em>. The <code>spec</code> tool tracks changes — proposal, requirement deltas, and a task checklist with real status — as <b>SQLite rows, not markdown</b>; living specs are the current truth, and archiving folds a change's deltas into them transactionally. The active change is injected into context; archiving forms a memory. Inspired by <a href="https://github.com/Fission-AI/OpenSpec">OpenSpec</a>.</p>
+    </div>
+    <div class="feat">
       <h3>Token-Efficient I/O</h3>
       <p>Tree-sitter <code>read_minified</code>/<code>edit_minified</code> collapse files to their skeleton; a hard read-before-edit gate blocks blind edits; and oversized <code>bash</code>/<code>webfetch</code> output is relayed to disk with a head+tail summary so the context window stays lean.</p>
     </div>
@@ -880,7 +884,7 @@ pre{margin:0}
     <div class="card"><h4>Search</h4><p><code>grep</code> · <code>glob</code> · <code>session_search</code></p></div>
     <div class="card"><h4>Web</h4><p><code>webfetch</code> · <code>websearch</code></p></div>
     <div class="card"><h4>Code intelligence</h4><p><code>list_symbols</code> · <code>get_symbol_body</code> · <code>find_callers</code> · <code>find_callees</code> · <code>find_definition</code> · <code>lsp</code> · <code>repo_overview</code></p></div>
-    <div class="card"><h4>Agent &amp; memory</h4><p><code>task</code> · <code>task_status</code> · <code>write_todo_list</code> · <code>memory</code> · <code>skill</code> · <code>question</code></p></div>
+    <div class="card"><h4>Agent &amp; memory</h4><p><code>task</code> · <code>task_status</code> · <code>write_todo_list</code> · <code>memory</code> · <code>skill</code> · <code>spec</code> · <code>question</code></p></div>
     <div class="card"><h4>Token-efficient I/O</h4><p><code>read_minified</code> · <code>edit_minified</code> — collapse a file to its tree-sitter skeleton</p></div>
     <div class="card"><h4>Debugging</h4><p><code>debug</code> — DAP step-through: breakpoints, step, inspect stacks &amp; variables</p></div>
     <div class="card"><h4>Dynamic discovery</h4><p><code>tool_search</code> — load tools on demand to keep the prompt lean</p></div>
@@ -910,6 +914,7 @@ pre{margin:0}
     <div class="card"><h4>/fork</h4><p>Branch the conversation</p></div>
     <div class="card"><h4>/loop</h4><p>Start an iterative coding loop</p></div>
     <div class="card"><h4>/tasks</h4><p>List background shells &amp; agents</p></div>
+    <div class="card"><h4>/spec</h4><p>Inspect spec changes &amp; living specs</p></div>
     <div class="card"><h4>/mcp</h4><p>List MCP servers and tools</p></div>
     <div class="card"><h4>/worktree</h4><p>Create a git worktree</p></div>
     <div class="card"><h4>/plugins</h4><p>List loaded Janet plugins</p></div>
