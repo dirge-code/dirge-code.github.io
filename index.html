@@ -724,6 +724,10 @@ pre{margin:0}
       <p>Two-tier per-project memory — hot facts inline, the rest a searchable breadcrumb index — plus a global cross-project tier for durable preferences, injected as a cache-stable snapshot. A post-session orchestrator extracts learnings and curates memory &amp; skills between sessions.</p>
     </div>
     <div class="feat">
+      <h3>Built-In Issue Board</h3>
+      <p>A persistent, agent-facing kanban in the session DB — a stateful extension of the memory model. The harness surfaces the top open issues at the <em>start of every turn</em>, so the agent works its backlog without polling a tracker. The <code>issue</code> tool manages it (create / start / close, priorities, cross-session); <code>/issues</code> views it. SQLite rows, no external tracker.</p>
+    </div>
+    <div class="feat">
       <h3>Long-Horizon Sessions</h3>
       <p>Durable, incrementally-refreshed checkpoints anchored to a stable identity — so resuming a long, compacted session recovers its live state instead of a stale snapshot. Hold autonomous runs to a natural-language stop condition with <code>--goal</code>. Adapted from <a href="https://github.com/XiaomiMiMo/MiMo-Code">MiMo-Code</a>.</p>
     </div>
@@ -910,6 +914,7 @@ pre{margin:0}
     <div class="card"><h4>/panel</h4><p>Toggle the side gutters</p></div>
     <div class="card"><h4>/compress</h4><p>Compact history for context</p></div>
     <div class="card"><h4>/sessions</h4><p>List, save, load sessions</p></div>
+    <div class="card"><h4>/issues</h4><p>View the native issue board</p></div>
     <div class="card"><h4>/tree</h4><p>Show session branch tree</p></div>
     <div class="card"><h4>/fork</h4><p>Branch the conversation</p></div>
     <div class="card"><h4>/loop</h4><p>Start an iterative coding loop</p></div>
