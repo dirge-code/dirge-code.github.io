@@ -752,6 +752,10 @@ pre{margin:0}
       <p>An opt-in <code>/plan</code> workflow runs <b>explore → plan → implement → review</b> as context-isolated phases: a read-only agent maps the code, a second drafts the plan, then a write-disabled reviewer <em>runs the code</em> and feeds gaps back for a bounded retry.</p>
     </div>
     <div class="feat">
+      <h3>Diff-Aware Code Review</h3>
+      <p>As agents write code, a reviewer reads the <em>actual diff</em> — not just the transcript — in two passes (review, then verify to drop false positives). <b>High/critical</b> findings block the loop until fixed or justified; <b>medium/low</b> surface as advisories. Run it any time with <code>/code-review</code>. Reuses the critic's judge, so it's one opt-in with no cost when off.</p>
+    </div>
+    <div class="feat">
       <h3>Spec-Driven Workflow</h3>
       <p>Align on <em>what</em> before <em>how</em>. The <code>spec</code> tool tracks changes — proposal, requirement deltas, and a task checklist with real status — as <b>SQLite rows, not markdown</b>; living specs are the current truth, and archiving folds a change's deltas into them transactionally. The active change is injected into context; archiving forms a memory. Inspired by <a href="https://github.com/Fission-AI/OpenSpec">OpenSpec</a>.</p>
     </div>
@@ -906,6 +910,7 @@ pre{margin:0}
     <div class="card"><h4>/agent</h4><p>Switch the active agent profile</p></div>
     <div class="card"><h4>/prompt</h4><p>List or activate system prompts</p></div>
     <div class="card"><h4>/plan</h4><p>Run the phased plan workflow</p></div>
+    <div class="card"><h4>/code-review</h4><p>Review the working-tree diff for issues</p></div>
     <div class="card"><h4>/mode</h4><p>Set security permission mode</p></div>
     <div class="card"><h4>/why</h4><p>Trace the last permission decision</p></div>
     <div class="card"><h4>/allow</h4><p>Manage the session allowlist</p></div>
