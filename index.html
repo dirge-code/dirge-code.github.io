@@ -767,6 +767,10 @@ pre{margin:0}
       <h3>Step-Through Debugging</h3>
       <p>A built-in Debug Adapter Protocol client drives real debuggers — set breakpoints, step, inspect stacks and variables — straight from the agent loop and Janet plugins (<code>debug</code> tool, <code>dap/*</code> bindings).</p>
     </div>
+    <div class="feat">
+      <h3>Vision &amp; Image Paste</h3>
+      <p>Paste a clipboard image into the prompt with <code>Ctrl+V</code> and send it to a vision model — turns are multipart, interleaving text and pictures. Images live out-of-line in the session's <code>assets/</code> dir and are re-read at the provider boundary each turn, so transcripts stay small. Gated by provider/model vision support, with a <code>multimodal</code> override for local models like Ollama <code>llama3.2-vision</code>.</p>
+    </div>
   </div>
 </section>
 
